@@ -1,0 +1,9 @@
+com\springMvc\controller\UserController.class
+com\springMvc\dao\UserDaoImpl.class
+com\springMvc\service\UserServiceImpl.class
+com\springMvc\config\HibernateConfig.class
+com\springMvc\config\WebInitializer.class
+com\springMvc\service\UserService.class
+com\springMvc\dao\UserDao.class
+com\springMvc\config\WebConfig.class
+com\springMvc\model\User.class
