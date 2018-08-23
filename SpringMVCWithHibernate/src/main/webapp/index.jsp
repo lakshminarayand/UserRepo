@@ -9,7 +9,7 @@
 
 function register()
 {
-	window.location = "register.jsp";
+	window.location = "/login/register.jsp";
 }
 </script>
 </head>
