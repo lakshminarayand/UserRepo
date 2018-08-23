@@ -9,13 +9,13 @@
 
 function register()
 {
-	window.location = "register.jsp";
+	window.location = "/login/register.jsp";
 }
 </script>
 </head>
 <body bgcolor="#e5e3d7">
 <div>
-<h1 align="center">SWAT TEAM</h1>
+<h1 align="center">SWAT Team Login</h1>
 <hr>
 </div>
 <div class="login" align="center">
@@ -23,9 +23,9 @@ function register()
 <form method="post" action="register.jsp">
 <input type="text" name="username" placeholder="username" required="required"/></br></br>
 <input type="text" name="password" placeholder="password" required="required"/></br></br>
-<button type="button" onclick="" class="btn btn-primary btn-block btn-large">LOGIN</button>&nbsp;
-<button type="button" onclick="register()"class="btn btn-primary btn-block btn-large">SIGN UP</button></br></br>
-<a href="ForgotPassword.jsp">forgot password</a>
+<button type="button" onclick="" class="btn btn-primary btn-block btn-large">LogIn</button>&nbsp;
+<button type="button" onclick="register()"class="btn btn-primary btn-block btn-large">Sign UP</button></br></br>
+<a href="ForgotPassword.jsp">Forgot Password</a>
 
 </form>
 
