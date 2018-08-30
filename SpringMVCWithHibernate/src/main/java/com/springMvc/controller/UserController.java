@@ -25,8 +25,9 @@ public class UserController {
 		return userService.geListOfUsers();
 	}
 	
-	@RequestMapping(value="/adduser/", method=RequestMethod.POST,headers="Accept=application/json")
+	@RequestMapping(value="/adduser/", method=RequestMethod.POST,headers="Accept=application/text")
 	public @ResponseBody User addUser(@RequestBody User user) {
+		System.out.println("jjjjjjjjjjjj");
 		userService.saveOrUpdate(user);
 		return user;
 	}

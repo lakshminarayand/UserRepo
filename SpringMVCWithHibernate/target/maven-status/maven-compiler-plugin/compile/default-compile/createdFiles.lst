@@ -1,3 +1,4 @@
+com\springMvc\controller\UIController.class
 com\springMvc\controller\UserController.class
 com\springMvc\dao\UserDaoImpl.class
 com\springMvc\service\UserServiceImpl.class

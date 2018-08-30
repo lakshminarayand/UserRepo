@@ -46,7 +46,7 @@ return true;
 <body bgcolor="#e5e3d7">
 <div class="login" align="center">
 <h2>Register</h2>
-<form name="frm" method="post">
+<form name="frm" method="post" action="ui/add/">
 <table>
 <tr>
 <td><input type="text" name="name" placeholder="name" required="required"/></br></br></td>
