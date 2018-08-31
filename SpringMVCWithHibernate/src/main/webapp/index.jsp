@@ -9,7 +9,7 @@
 
 function register()
 {
-	window.location = "register.jsp";
+	window.location = "ui/reg";
 }
 </script>
 </head>
@@ -20,10 +20,10 @@ function register()
 </div>
 <div class="login" align="center">
 <h2 style="color:#2a23e0">LOGIN</h2>
-<form method="post" action="register.jsp">
+<form method="post" action="ui/login/">
 <input type="text" name="username" placeholder="username" required="required"/></br></br>
-<input type="text" name="password" placeholder="password" required="required"/></br></br>
-<button type="button" onclick="" class="btn btn-primary btn-block btn-large">LOGIN</button>&nbsp;
+<input type="password" name="password" placeholder="password" required="required"/></br></br>
+<button type="submit" class="btn btn-primary btn-block btn-large">LOGIN</button>&nbsp;
 <button type="button" onclick="register()"class="btn btn-primary btn-block btn-large">SIGN UP</button></br></br>
 <a href="ForgotPassword.jsp">forgot password</a>
 

@@ -16,8 +16,20 @@ class UIController {
 
 	@Autowired 
 	private UserService userService;
-	@RequestMapping(value="/add/", method = RequestMethod.POST)
+	
+	@RequestMapping(value="/reg", method = RequestMethod.GET)
+	public ModelAndView reg() {
+	
+		ModelAndView mv = new ModelAndView();
+		mv.setViewName("register");
+		
+		return mv;
+		
+	}
+	
+	@RequestMapping(value={"/ui/add/","/login/ui/add/"}, method = RequestMethod.POST)
 	public ModelAndView addUser(@ModelAttribute("user") User user) {
+		
 		userService.saveOrUpdate(user);
 		ModelAndView mv = new ModelAndView();
 		mv.setViewName("details");
@@ -25,5 +37,27 @@ class UIController {
 		return mv;
 		
 	}
+	
+	@RequestMapping(value="/login/", method= RequestMethod.POST)
+	public ModelAndView validateUser(@ModelAttribute("user") User user) {
+		ModelAndView mv = new ModelAndView();
+		System.out.println("{_______________");
+		if(userService.findUserByUsername(user.getUsername(), user.getPassword())) {
+			System.out.println(userService.findUserByUsername(user.getUsername(), user.getPassword()));
+			mv.setViewName("success");
+		}
+		else
+		{
+			
+			mv.setViewName("register");
+			
+		}
+			
+		
+		return mv;
+	}
+	
+	
+	
 
 }

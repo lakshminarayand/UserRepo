@@ -5,6 +5,7 @@ import java.util.List;
 import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.criterion.Restrictions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
@@ -24,6 +25,7 @@ public class UserDaoImpl implements UserDao {
 	@SuppressWarnings("unchecked")
 	public List<User> geListOfUsers() {
 		Criteria criteria = getSession().createCriteria(User.class);
+		
 		return (List<User>)criteria.list();
 	}
 
@@ -37,6 +39,16 @@ public class UserDaoImpl implements UserDao {
 
 	public User findUserById(int id) {
 		return (User) getSession().get(User.class, id);
+	}
+	
+	public int findUser(String username, String password) {
+		Criteria criteria = getSession().createCriteria(User.class)
+				.add(Restrictions.eq("username", username))
+				.add(Restrictions.and(
+				     Restrictions.eq("password", password)));
+		int l =criteria.list().size();
+		
+		return l;
 	}
 
 }

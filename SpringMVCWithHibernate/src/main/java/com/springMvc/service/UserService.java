@@ -9,4 +9,5 @@ public interface UserService {
 	public void saveOrUpdate(User user);
 	public void delete(User user);
 	public User findUserById(int id);
+	public boolean findUserByUsername(String Username, String Password);
 }

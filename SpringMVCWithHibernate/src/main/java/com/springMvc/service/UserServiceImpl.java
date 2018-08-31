@@ -30,5 +30,13 @@ public class UserServiceImpl implements UserService {
 	public User findUserById(int id) {
 		return userDao.findUserById(id);
 	}
+	
+	public boolean findUserByUsername(String Username, String Password) {
+		if(userDao.findUser(Username,Password)>0)
+		{ 
+			return true;
+		}
+		return false ;
+	}
 
 }
